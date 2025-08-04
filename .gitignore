@@ -1,0 +1,95 @@
+#-------------------------
+# Operating System Files
+#-------------------------
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+*.log
+
+# Linux
+*~
+
+#-------------------------
+# IDE Files
+#-------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# PhpStorm
+.idea/
+*.iml
+
+# NetBeans
+nbproject/
+nbproject/private/
+
+# Eclipse
+.buildpath
+.project
+.settings/
+
+#-------------------------
+# Composer
+#-------------------------
+/vendor/
+composer.phar
+
+#-------------------------
+# Node Modules (if using npm)
+#-------------------------
+node_modules/
+
+#-------------------------
+# Environment Files
+#-------------------------
+.env
+.env.local
+.env.*.local
+
+#-------------------------
+# CodeIgniter 4 Specific
+#-------------------------
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+!writable/cache/index.html
+!writable/logs/index.html
+!writable/session/index.html
+!writable/uploads/index.html
+
+#-------------------------
+# Testing
+#-------------------------
+phpunit.xml
+.phpunit.result.cache
+
+#-------------------------
+# Build Files
+#-------------------------
+builds/
+
+#-------------------------
+# Backup Files
+#-------------------------
+*.bak
+*.backup
+*.orig
+*.swp
+*.swo
+*~
+
+#-------------------------
+# Temporary Files
+#-------------------------
+*.tmp
+*.temp
+*.cache
