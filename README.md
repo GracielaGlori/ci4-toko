@@ -22,7 +22,7 @@ A simple e-commerce application built with CodeIgniter 4 framework for managing 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/[your-username]/ci4-toko.git
+   git clone https://github.com/GracielaGlori/ci4-toko.git
    cd ci4-toko
    ```
 

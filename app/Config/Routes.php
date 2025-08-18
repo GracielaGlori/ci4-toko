@@ -37,4 +37,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->resource('products');
+$routes->get('products', 'Product::index');
+$routes->get('products/new', 'Product::new');
+$routes->post('products', 'Product::create');
+$routes->get('products/(:num)', 'Product::show/$1');
+$routes->get('products/(:num)/edit', 'Product::edit/$1');
+$routes->post('products/(:num)/update', 'Product::update/$1');
+$routes->post('products/(:num)/delete', 'Product::delete/$1');
