@@ -34,7 +34,8 @@
 
     <form action="/products/<?= $product['id'] ?>" method="post">
         <?= csrf_field() ?>
-        <input type="hidden" name="_method" value="PUT"> <div>
+        <input type="hidden" name="_method" value="PUT">
+        <div>
             <label for="name">Nama Produk:</label>
             <input type="text" id="name" name="name" value="<?= old('name', $product['name']) ?>">
             <?php if (session()->getFlashdata('errors.name')): ?>

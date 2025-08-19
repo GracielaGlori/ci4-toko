@@ -70,24 +70,27 @@ class Product extends ResourceController
 
  
     public function update($id = null)
-    {
-         $rules = $this->model->validationRules;
-        $messages = $this->model->validationMessages;
+{
+    // Log data yang diterima
+    log_message('info', 'Data yang diterima untuk update: ' . json_encode($this->request->getPost()));
 
-        if (!$this->validate($rules, $messages)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+    $rules = $this->model->validationRules;
+    $messages = $this->model->validationMessages;
 
-        $data = [
-            'name'        => $this->request->getPost('name'),
-            'description' => $this->request->getPost('description'),
-            'price'       => $this->request->getPost('price'),
-            'stock'       => $this->request->getPost('stock'),
-        ];
-
-        $this->model->update($id, $data);
-        return redirect()->to('/products')->with('success', 'Produk berhasil diupdate!');
+    if (!$this->validate($rules, $messages)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
     }
+
+    $data = [
+        'name'        => $this->request->getPost('name'),
+        'description' => $this->request->getPost('description'),
+        'price'       => $this->request->getPost('price'),
+        'stock'       => $this->request->getPost('stock'),
+    ];
+
+    $this->model->update($id, $data);
+    return redirect()->to('/products')->with('success', 'Produk berhasil diupdate!');
+}
 
  
     public function delete($id = null)
